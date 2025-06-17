@@ -5,7 +5,7 @@ const FeaturesGridPage = () => {
     {
       title: "Online Storefront",
       description:
-        "Create stunning storefronts that differentiate your brand. Offer an effortless journey for your customers in an intuitive platform.",
+        "Create a stunning, mobile-friendly storefront with customizable templates and smooth navigation for a seamless shopping experience on any device.",
       imageUrl: "/onlineStorefront.png",
       colSpan: 1,
       rowSpan: 1,
@@ -13,7 +13,7 @@ const FeaturesGridPage = () => {
     {
       title: "CRM and Loyalty Points",
       description:
-        "Create a comprehensive customer record. Identify your top customers with sales history. Reward your loyal customers for their purchases.",
+        "Strengthen customer relationships with integrated CRM tools that track behavior, reward loyalty, and automate personalized marketing to boost retention.",
       imageUrl: "/loyality.jpg",
       colSpan: 1,
       rowSpan: 1,
@@ -21,7 +21,7 @@ const FeaturesGridPage = () => {
     {
       title: "Sales Reporting",
       description:
-        "Get detailed reporting of sales, profit, and customer behavior. Make informed decisions with comprehensive insights from your business.",
+        "Get detailed sales reports by product, channel, staff, and promotions to track performance, monitor discounts , and make smart business decisions.",
       imageUrl: "/sales.png",
       colSpan: 1,
       rowSpan: 1,
@@ -53,7 +53,7 @@ const FeaturesGridPage = () => {
     {
       title: "Point of Sale (POS)",
       description:
-        "Efficiently process sales and manage inventory. Optimize your POS operations for a smooth customer experience.",
+        "Unify in-store and online sales with a smart POS system that manages payments, inventory, and customer data—featuring mobile terminals and customer displays for a seamless checkout experience.",
       imageUrl: "/pointofsales.jpg",
       colSpan: 1,
       rowSpan: 1,
@@ -93,7 +93,7 @@ const FeaturesGridPage = () => {
     {
       title: "Barcode and Inventory Management",
       description:
-        "Automate inventory tracking with barcodes. Streamline your stock management and reduce manual errors.",
+        "Efficiently track every product with barcode integration. Assign unique barcodes to items, enabling real-time inventory updates during sales, restocking, and transfers. Automated alerts help prevent stockouts, while detailed reports provide insights into sales trends and inventory performance.",
       imageUrl: "/barcode.jpg",
       colSpan: 1.5,
       rowSpan: 1,
@@ -102,9 +102,9 @@ const FeaturesGridPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-1 py-12">
+      <main className="flex-1 py-8">
         <div
-          className="w-full px-4 grid grid-cols-2 md:grid-cols-6 mx-auto lg:gap-8 md:gap-6 gap-4 xl:w-3/4 lg:w-4/5"
+          className="w-full px-4 grid grid-cols-2 md:grid-cols-6 mx-auto lg:gap-6 md:gap-6 gap-4 font-black lg:w-4/5"
           style={{ gridAutoRows: "minmax(300px, auto)" }}
         >
           {features.map((feature, index) => {
@@ -127,7 +127,7 @@ const FeaturesGridPage = () => {
                 imageUrl={feature.imageUrl}
                 colSpan={feature.colSpan}
                 rowSpan={feature.rowSpan}
-                className={isAloneInLastRow ? "mx-auto" : ""}
+                className={isAloneInLastRow ? "col-span-6" : ""}
               />
             );
           })}

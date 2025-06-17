@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
+import clsx from "clsx";
 
 export default function FeatureGridItem({
   title,
@@ -25,45 +26,37 @@ export default function FeatureGridItem({
     4: "row-span-4",
   };
 
-  const effectiveColSpan =
-    className === "last" ? "md:col-span-6" : colSpanClasses[colSpan] || colSpanClasses[1];
-
-  const effectiveRowSpan = rowSpanClasses[rowSpan] || rowSpanClasses[1];
-
   return (
     <div
-      className={`
-        ${effectiveColSpan} ${effectiveRowSpan}
-        bg-white flex flex-col w-full max-w-[708px] mx-auto
-        animate-fade-in-up overflow-hidden
-      `}
-      style={{
-        animationDelay: `${index * 100}ms`,
-      }}
+      className={clsx(
+        colSpanClasses[colSpan] || colSpanClasses[1],
+        rowSpanClasses[rowSpan] || rowSpanClasses[1],
+        "bg-white w-full flex flex-col h-full animate-fade-in-up overflow-hidden",
+        className === "mobile-last" && "col-span-2"
+      )}
+      style={{ animationDelay: `${index * 100}ms` }}
       role="group"
       aria-label={title}
     >
       {/* Text Section */}
-      <div className="px-4 py-3">
+      <div className="px-4 py-3 font-sans">
         <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
           {title || "Untitled Feature"}
         </h3>
-        <p className="text-sm sm:text-base text-gray-600 font-medium mb-4">
+        <p className="text-base font-normal text-black-900 mb-4">
           {description || "No description provided."}
         </p>
       </div>
 
       {/* Image Section */}
-      <div className="flex-grow px-4 pb-4">
-        <div className="w-full h-full aspect-[4/3] overflow-hidden rounded-xl relative">
+      <div className="px-4 pb-4 flex-1 flex rounded-xl">
+        <div className="w-full h-full   min-h-[230px] overflow-hidden rounded-xl relative">
           {imageUrl ? (
             <Image
               src={imageUrl}
               alt={title || "Feature image"}
               fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 33vw"
-              priority={false}
+              className="object-cover  rounded-xl "
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500 text-xs italic rounded-xl">
