@@ -39,11 +39,11 @@ export default function FeatureGridItem({
       aria-label={title}
     >
       {/* Text Section */}
-      <div className="px-4 py-3 font-sans">
-        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+      <div className="px-4 py-3 ">
+        <h3 className=" sm:text-lg font-semibold text-gray-900 mb-1 leading-[20px]">
           {title || "Untitled Feature"}
         </h3>
-        <p className="text-base font-normal text-black-900 mb-4">
+        <p className=" text-[12px] font-light  text-black-900 mb-4 text-left leading-[20px]">
           {description || "No description provided."}
         </p>
       </div>
