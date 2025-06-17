@@ -107,17 +107,30 @@ const FeaturesGridPage = () => {
           className="w-full px-4 grid grid-cols-2 md:grid-cols-6 mx-auto lg:gap-8 md:gap-6 gap-4 xl:w-3/4 lg:w-4/5"
           style={{ gridAutoRows: "minmax(300px, auto)" }}
         >
-          {features.map((feature, index) => (
-            <FeatureGridItem
-              key={index}
-              title={feature.title}
-              description={feature.description}
-              imageUrl={feature.imageUrl}
-              colSpan={feature.colSpan}
-              rowSpan={feature.rowSpan}
-           
-            />
-          ))}
+          {features.map((feature, index) => {
+            const totalCols = 6;
+            // Sum colSpans until the current item
+            const totalColSpansBefore = features
+              .slice(0, index)
+              .reduce((sum, item) => sum + item.colSpan, 0);
+
+            // Check if it's the only item in the last row
+            const isAloneInLastRow =
+              index === features.length - 1 &&
+              (totalColSpansBefore % totalCols) + feature.colSpan <= totalCols;
+
+            return (
+              <FeatureGridItem
+                key={index}
+                title={feature.title}
+                description={feature.description}
+                imageUrl={feature.imageUrl}
+                colSpan={feature.colSpan}
+                rowSpan={feature.rowSpan}
+                className={isAloneInLastRow ? "mx-auto" : ""}
+              />
+            );
+          })}
         </div>
       </main>
     </div>
