@@ -108,8 +108,16 @@ const FeaturesGridPage = () => {
           style={{ gridAutoRows: "minmax(300px, auto)" }}
         >
           {features.map((feature, index) => {
-            
-            
+            const totalCols = 6;
+            // Sum colSpans until the current item
+            const totalColSpansBefore = features
+              .slice(0, index)
+              .reduce((sum, item) => sum + item.colSpan, 0);
+
+            // Check if it's the only item in the last row
+            const isAloneInLastRow =
+              index === features.length - 1 &&
+              (totalColSpansBefore % totalCols) + feature.colSpan <= totalCols;
 
             return (
               <FeatureGridItem
@@ -119,6 +127,7 @@ const FeaturesGridPage = () => {
                 imageUrl={feature.imageUrl}
                 colSpan={feature.colSpan}
                 rowSpan={feature.rowSpan}
+                
               />
             );
           })}
