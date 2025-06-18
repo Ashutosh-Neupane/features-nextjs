@@ -36,8 +36,9 @@ const AboutCardSection = () => {
             key={index}
             className="bg-white rounded-3xl p-6 sm:p-10 transition-transform transform hover:scale-[1.03] shadow-md"
             style={{
-              borderColor: item.color,
-              boxShadow: `-4px 4px 6px -1px ${item.color}, -2px 2px 4px -2px ${item.color}`,
+              borderBottom: `6px solid ${item.color}`,
+              borderLeft: `6px solid ${item.color}`,
+             
             }}
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 text-center sm:text-left">
