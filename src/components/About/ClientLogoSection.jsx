@@ -133,7 +133,7 @@ const ClientLogoSection = () => {
         </p>
 
   
-        <div className="mt-16 max-w-[1480px] mx-auto">
+        <div className="mt-16 max-w-[1400px] mx-auto">
           <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 sm:gap-x-5 sm:gap-y-3 lg:gap-x-8 lg:gap-y-4">
             {clients.map((client, idx) => (
               <ClientLogo key={idx} {...client} />
