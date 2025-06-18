@@ -124,7 +124,7 @@ const ClientLogoSection = () => {
   return (
     <section className="py-16 text-center ">
       <div className=" mx-auto  flex flex-col gap-[16px] px-4 sm:px-6 lg:px-8">
-        <h1 className="font-extrabold text-[#313332] text-4xl sm:text-5xl lg:text-6xl mb-4">
+        <h1 className="font-extrabold text-[#313332] text-3xl sm:text-5xl lg:text-5xl ">
           Our Clients & partners
         </h1>
         <p className="mt-4 text-base text-[#646966]  font-semibold leading-relaxed max-w-xl mx-auto">
