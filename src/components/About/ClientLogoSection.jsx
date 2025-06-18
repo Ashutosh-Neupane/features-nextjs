@@ -123,21 +123,16 @@ const ClientLogo = ({ name, logo }) => (
 const ClientLogoSection = () => {
   return (
     <section className="py-16 text-center max-w-[1520px]">
-      <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1520px] mx-auto  flex flex-col gap-[16px] px-4 sm:px-6 lg:px-8">
         <h1 className="font-extrabold text-[#313332] text-4xl sm:text-5xl lg:text-6xl mb-4">
           Our Clients & partners
         </h1>
-        <p className="mt-4 text-base text-[#646966] leading-relaxed max-w-2xl mx-auto">
+        <p className="mt-4 text-base text-[#646966]  font-semibold leading-relaxed max-w-xl mx-auto">
           Effortlessly organize your task with intuitive prioritization tools,
           ensuring you focus on what truly matters.
         </p>
 
-        {/* Main change is here:
-          - We removed the outer container that used 'flex-col'.
-          - We now have a single container for all logos.
-          - 'flex-wrap' allows items to wrap to the next line.
-          - 'justify-center' keeps the items centered in their lines.
-        */}
+  
         <div className="mt-16 max-w-[1480px] mx-auto">
           <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 sm:gap-x-5 sm:gap-y-3 lg:gap-x-8 lg:gap-y-4">
             {clients.map((client, idx) => (

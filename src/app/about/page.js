@@ -9,6 +9,7 @@ export default function AboutPage() {
   return (
     <div className="w-full py-12 p-0 overflow-x-hidden">
       {/* Hero Section */}
+
       <section className="text-center mb-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="font-extrabold text-[#313332] text-4xl sm:text-5xl lg:text-6xl leading-tight">
           About Us
@@ -20,14 +21,14 @@ export default function AboutPage() {
       </section>
 
       {/* Image + Intro Section */}
-      <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-[83rem] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center mb-20 px-4 sm:px-6 lg:px-8">
         {/* Left: Image */}
-        <div className=" h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] rounded-lg overflow-hidden shadow-md">
+        <div className=" h-[300px] sm:h-[350px] md:h-[400px] lg:h-[286px] rounded-lg overflow-hidden shadow-md">
           <Image
             src="/about.jpg"
             alt="About Lungta.biz"
-            width={800}
-            height={450}
+            width={674}
+            height={286}
             className="object-cover w-full h-full"
             priority
           />
@@ -35,7 +36,7 @@ export default function AboutPage() {
 
         {/* Right: Text + Button */}
         <div className="text-gray-700 space-y-6">
-          <p className="text-base sm:text-lg leading-relaxed">
+          <p className="text-base sm:text-lg text-left font-[500] leading-relaxed">
             Welcome to{" "}
             <a
               href="https://lungta.biz"
@@ -50,8 +51,8 @@ export default function AboutPage() {
             their online presence with a full suite of integrated solutions
             designed for the modern marketplace.
           </p>
-          <div className="w-36">
-            <GetStarted className="w-full h-11" />
+          <div className="w-30">
+            <GetStarted  />
           </div>
         </div>
       </section>
