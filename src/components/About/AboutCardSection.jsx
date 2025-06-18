@@ -41,7 +41,7 @@ const AboutCardSection = () => {
              
             }}
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 text-center sm:text-left">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 text-center  ">
               {item.title}
             </h3>
             <p className="text-base  sm:text-lg text-gray-600 font-medium leading-relaxed text-left">

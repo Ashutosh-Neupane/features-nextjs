@@ -122,8 +122,8 @@ const ClientLogo = ({ name, logo }) => (
 
 const ClientLogoSection = () => {
   return (
-    <section className="py-16 text-center max-w-[1520px]">
-      <div className="max-w-[1520px] mx-auto  flex flex-col gap-[16px] px-4 sm:px-6 lg:px-8">
+    <section className="py-16 text-center ">
+      <div className=" mx-auto  flex flex-col gap-[16px] px-4 sm:px-6 lg:px-8">
         <h1 className="font-extrabold text-[#313332] text-4xl sm:text-5xl lg:text-6xl mb-4">
           Our Clients & partners
         </h1>
