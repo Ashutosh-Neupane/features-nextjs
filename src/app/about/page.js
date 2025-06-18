@@ -11,7 +11,7 @@ export default function AboutPage() {
       {/* Hero Section */}
 
       <section className="text-center mb-16 max-w-2xl mx-auto px-5 sm:px-6 lg:px-8">
-        <h1 className="font-extrabold text-[#313332] text-4xl sm:text-5xl lg:text-6xl leading-tight">
+        <h1 className="font-extrabold text-[#313332] text-4xl sm:text-5xl lg:text-5xl leading-tight">
           About Us
         </h1>
         <p className="mt-2  px-6  text-base text-[#646966] leading-relaxed">
