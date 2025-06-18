@@ -1,6 +1,5 @@
 import FeatureGridItem from "@/components/FeatureGridItem";
 
-
 const FeaturesGridPage = () => {
   const features = [
     {
@@ -104,12 +103,22 @@ const FeaturesGridPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 py-8">
+        <div className="text-center max-w-[498px] mx-auto px-4  flex  mt-12 mb-5 flex-col sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#313332]">
+            Features
+          </h1>
+          <p className="mt-2 text-base font-[500] text-[#646966] leading-relaxed text-[14px]">
+            Don&apos;t just take our word for it—hear directly from the buyers,
+            sellers, and investors who have trusted us with their real estate
+            needs.
+          </p>
+        </div>
+
         <div
           className="w-full px-4 grid  md:grid-cols-6 mx-auto lg:gap-6 md:gap-6 gap-4 font-black lg:w-4/5"
           style={{ gridAutoRows: "minmax(300px, auto)" }}
         >
           {features.map((feature, index) => {
-          
             return (
               <FeatureGridItem
                 key={index}
@@ -118,7 +127,6 @@ const FeaturesGridPage = () => {
                 imageUrl={feature.imageUrl}
                 colSpan={feature.colSpan}
                 rowSpan={feature.rowSpan}
-              
               />
             );
           })}
