@@ -76,9 +76,9 @@ const Header = () => {
       }`}
       style={{ height: "87px" }}
     >
-      <div className="max-w-screen-xl mx-auto sm:px-6 md:px-8 flex justify-between items-center h-full py-4">
+      <div className="max-w-screen-xl mx-auto px-2 sm:px-2 md:px-4 flex justify-between items-center h-full py-4">
         {/* Logo */}
-        <h1 className="text-lg font-bold w-[120px] h-[60px]">
+        <h1 className="text-lg font-bold w-auto h-[60px]">
           <img
             src="/lungtaHeader.png"
             alt="Lungta logo"
