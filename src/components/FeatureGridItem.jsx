@@ -43,7 +43,7 @@ export default function FeatureGridItem({
         <h3 className=" sm:text-lg font-semibold text-gray-900 mb-1 leading-[20px]">
           {title || "Untitled Feature"}
         </h3>
-        <p className=" text-[12px] font-light  text-black-900 mb-4 text-left leading-[20px]">
+        <p className=" text-[12px] font-semibold text-black-900 mb-4 text-left leading-[20px]">
           {description || "No description provided."}
         </p>
       </div>
