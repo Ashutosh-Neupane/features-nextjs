@@ -103,7 +103,7 @@ const FeaturesGridPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 py-8">
-        <div className="text-center max-w-[498px] mx-auto px-4  flex  mt-12 mb-5 flex-col sm:px-6 lg:px-8">
+        <div className="text-center max-w-[498px] mx-auto px-4  flex  mt-5 mb-5 flex-col sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-[#313332]">
             Features
           </h1>
