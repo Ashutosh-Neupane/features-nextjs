@@ -127,7 +127,7 @@ const ClientLogoSection = () => {
         <h1 className="font-extrabold text-[#313332] text-3xl sm:text-5xl lg:text-5xl ">
           Our Clients & partners
         </h1>
-        <p className="mt-4 text-base text-[#646966]  font-semibold leading-relaxed max-w-xl mx-auto">
+        <p className="mt-4 text-base text-[#646966]  font-[500] leading-relaxed max-w-xl mx-auto">
           Effortlessly organize your task with intuitive prioritization tools,
           ensuring you focus on what truly matters.
         </p>
