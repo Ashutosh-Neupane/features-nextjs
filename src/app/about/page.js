@@ -14,7 +14,7 @@ export default function AboutPage() {
         <h1 className="font-extrabold text-[#313332] text-4xl sm:text-5xl lg:text-6xl leading-tight">
           About Us
         </h1>
-        <p className="mt-4 text-base text-[#646966] leading-relaxed">
+        <p className="mt-2  px-6  text-base text-[#646966] leading-relaxed">
           Here’s what brings you to the table and what we offer and how our
           eCommerce site evolved through.
         </p>
