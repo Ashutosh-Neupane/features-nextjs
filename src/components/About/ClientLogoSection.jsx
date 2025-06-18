@@ -25,14 +25,6 @@ const clients = [
   { name: "Bluiera", logo: "/About/logos/bluiera2.png" }, // reused
 ];
 
-// This function can remain as is if you want fixed rows,
-// but for true responsiveness, you might reconsider hardcoding slice indices.
-const getThreeRows = (clients) => [
-  clients.slice(0, 9),
-  clients.slice(9, 16),
-  clients.slice(16, 21),
-];
-
 const ClientLogo = ({ name, logo }) => (
   <div className="client-logo-item flex items-center gap-2 px-4 py-2 hover:-translate-y-1 transition duration-200 cursor-pointer">
     <div className="w-8 h-8 relative">
@@ -48,8 +40,6 @@ const ClientLogo = ({ name, logo }) => (
 );
 
 const ClientLogoSection = () => {
-  const rows = getThreeRows(clients);
-
   return (
     <section className="py-16 text-center max-w-[1520px]">
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,17 +51,12 @@ const ClientLogoSection = () => {
           ensuring you focus on what truly matters.
         </p>
 
-        <div className="mt-16 flex flex-col items-center gap-6">
-          {rows.map((row, index) => (
-            <div
-              key={index}
-              className="flex justify-center flex-wrap gap-x-3 gap-y-2 sm:gap-x-5 sm:gap-y-3 lg:gap-x-8 lg:gap-y-4" // Adjusted gaps
-            >
-              {row.map((client, idx) => (
-                <ClientLogo key={idx} {...client} />
-              ))}
-            </div>
-          ))}
+        <div className="mt-16">
+          <div className="flex justify-center max-w-[1420px] flex-wrap gap-x-3 gap-y-2 sm:gap-x-5 sm:gap-y-3 lg:gap-x-8 lg:gap-y-4">
+            {clients.map((client, idx) => (
+              <ClientLogo key={idx} {...client} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
