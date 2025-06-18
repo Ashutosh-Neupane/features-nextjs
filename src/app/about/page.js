@@ -35,8 +35,8 @@ export default function AboutPage() {
         </div>
 
         {/* Right: Text + Button */}
-        <div className="text-gray-700 space-y-6">
-          <p className="text-base sm:text-lg text-left font-[500] leading-relaxed">
+        <div className=" space-y-6">
+          <p className="text-base sm:text-lg  text-[#313332] text-left font-[550] leading-relaxed">
             Welcome to{" "}
             <a
               href="https://lungta.biz"
