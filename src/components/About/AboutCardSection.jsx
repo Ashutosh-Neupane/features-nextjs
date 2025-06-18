@@ -1,3 +1,5 @@
+"use client";
+
 const aboutItems = [
   {
     title: "Our Story",
@@ -6,13 +8,13 @@ const aboutItems = [
     color: "#EC2B2B",
   },
   {
-    title: "Who We Serve ",
+    title: "Who We Serve",
     description:
       "Our solutions are designed for businesses aiming to start or grow their eCommerce journey, manage multiple warehouses, and offer a smooth omnichannel experience. Whether you're a startup or a well-established brand, Lungta.biz is your reliable partner to simplify operations, expand customer reach, and increase profits.",
     color: "#2E5DE4",
   },
   {
-    title: "How We Work ",
+    title: "How We Work",
     description:
       "Our process starts with understanding your business goals and challenges. We then implement https://lungta.biz’s solutions to fit seamlessly into your workflow, ensuring you get the most out of every feature. Our dedicated support team stands by your side from setup to ongoing optimization.",
     color: "#0EA935",
@@ -27,24 +29,25 @@ const aboutItems = [
 
 const AboutCardSection = () => {
   return (
-    <section className="bg-[#F6F7F6] py-16 w-screen overflow-hidden">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {aboutItems.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg p-6 text-center transform transition duration-300 hover:scale-105"
-              style={{
-                boxShadow: `-4px 4px 6px -1px ${item.color}, -2px 2px 4px -2px ${item.color}`,
-              }}
-            >
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-600">{item.description}</p>
-            </div>
-          ))}
-        </div>
+    <section className="bg-[#F6F7F6] py-16 px-4 w-full">
+      <div className="max-w-screen-xl mx-auto grid gap-10 sm:grid-cols-2">
+        {aboutItems.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-3xl p-6 sm:p-10 transition-transform transform hover:scale-[1.03] shadow-md"
+            style={{
+              borderColor: item.color,
+              boxShadow: `-4px 4px 6px -1px ${item.color}, -2px 2px 4px -2px ${item.color}`,
+            }}
+          >
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 text-center sm:text-left">
+              {item.title}
+            </h3>
+            <p className="text-base sm:text-lg text-gray-600 font-medium leading-relaxed text-left">
+              {item.description}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

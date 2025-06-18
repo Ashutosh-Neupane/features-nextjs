@@ -22,7 +22,7 @@ export default function AboutPage() {
       {/* Image + Intro Section */}
       <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20 px-4 sm:px-6 lg:px-8">
         {/* Left: Image */}
-        <div className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] rounded-lg overflow-hidden shadow-md">
+        <div className=" h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] rounded-lg overflow-hidden shadow-md">
           <Image
             src="/about.jpg"
             alt="About Lungta.biz"

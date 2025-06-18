@@ -31,8 +31,8 @@ export default function FeatureGridItem({
       className={clsx(
         colSpanClasses[colSpan] || colSpanClasses[1],
         rowSpanClasses[rowSpan] || rowSpanClasses[1],
-        "bg-white w-full flex flex-col h-full animate-fade-in-up overflow-hidden",
-        className === "mobile-last" && "col-span-2"
+        "bg-white w-full flex flex-col h-full animate-fade-in-up  place-self-center overflow-hidden",
+        className 
       )}
       style={{ animationDelay: `${index * 100}ms` }}
       role="group"

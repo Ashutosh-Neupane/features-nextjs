@@ -104,7 +104,7 @@ const clients = [
 ];
 
 const ClientLogo = ({ name, logo }) => (
-  <div className="client-logo-item flex items-center gap-2 px-4 py-2 hover:-translate-y-1 transition duration-200 cursor-pointer">
+  <div className="flex items-center gap-2 px-4 py-2 hover:-translate-y-1 transition-transform duration-200 cursor-pointer">
     <div className="w-8 h-8 relative">
       <Image
         src={logo}
@@ -113,11 +113,13 @@ const ClientLogo = ({ name, logo }) => (
         className="rounded-full object-contain"
       />
     </div>
-    <span className="text-gray-800 text-sm sm:text-base">{name}</span>
+    <span className="text-[#1A202C] font-semibold font-inter text-[24px] sm:text-base md:text-sm">
+      {name}
+    </span>
   </div>
 );
 
-// The main component is now simplified.
+
 const ClientLogoSection = () => {
   return (
     <section className="py-16 text-center max-w-[1520px]">
