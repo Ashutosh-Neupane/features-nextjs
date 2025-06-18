@@ -10,7 +10,7 @@ export default function FeatureGridItem({
   colSpan = 1,
   rowSpan = 1,
   index = 0,
-  className = "",
+
 }) {
   const colSpanClasses = {
     1: "md:col-span-2",
@@ -32,7 +32,7 @@ export default function FeatureGridItem({
         colSpanClasses[colSpan] || colSpanClasses[1],
         rowSpanClasses[rowSpan] || rowSpanClasses[1],
         "bg-white w-full flex flex-col h-full animate-fade-in-up  place-self-center overflow-hidden",
-        className 
+     
       )}
       style={{ animationDelay: `${index * 100}ms` }}
       role="group"
